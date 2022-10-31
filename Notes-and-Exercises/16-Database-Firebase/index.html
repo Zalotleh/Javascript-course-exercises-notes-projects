@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Firebase</title>
+
+    <style>
+        .container{
+          max-width: 400px;
+        }
+      </style>
+</head>
+<body>
+    
+      
+    <div class="container my-5">
+    <h2>Recipes</h2>
+    <ul>
+        
+    </ul>
+    <form>
+        <label for="recipe">Add a new recipe:</label>
+        <div class="input-group">
+        <input type="text" class="form-control" id="recipe" required>
+        <div class="input-group-append">
+            <input type="submit" value="add" class="btn btn-outline-secondary">
+        </div>
+        </div>
+    </form>
+    <button>unsubscribe from changes</button>
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC2jalYSUpRt5xwq0YxekHsOqkQBZ3lv9U",
+        authDomain: "learning-firebase-javascript.firebaseapp.com",
+        databaseURL: "https://udemy-js-ab45b.firebaseio.com",
+        projectId: "learning-firebase-javascript",
+        storageBucket: "learning-firebase-javascript.appspot.com",
+        messagingSenderId: "1054172587001",
+      };
+      firebase.initializeApp(config);
+
+    //   initilaize our firebase connection and store it inside a db const
+      const db = firebase.firestore();  
+    </script>
+
+    <script src="sandbox.js"></script>
+</body>
+</html>
